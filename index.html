@@ -28,7 +28,11 @@
       var osm  = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '<a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
        });
-       osm.addTo(mapa);	    
+       osm.addTo(mapa);	
+	    
+      // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var Terrain = L.tileLayer.provider('Esri.WorldTerrain');
+      Terrain.addTo(mapa);   
 	    
        
 	  
@@ -73,7 +77,8 @@
       cantonescr.addTo(mapa);
       	    
       var baseLayers = {
-	"OpenStreetMap": osm                                                                                                                                        
+	"OpenStreetMap": osm,
+	"Terrain":Terrain
 	};
       var overlays = {
       "Cantones de costa rica":cantonescr

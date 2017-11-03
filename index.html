@@ -36,23 +36,7 @@
         });
 	OpenTopoMap.addTo(mapa);    
 	    
-	var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        });
-	OpenStreetMap_Mapnik.addTo(mapa);
-	    
-	var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
-	maxZoom: 20,
-	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        });
-	OpenMapSurfer_Roads.addTo(mapa);    
-	    
-	// Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
-        var terrain = L.tileLayer.provider('Esri.WorldTerrain');
-        terrain.addTo(mapa);
-	    
-   
+	  
 	    
       // retorna un color con base en la cantidad de especies
       function color(d) {

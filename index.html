@@ -44,6 +44,9 @@
 	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         });
 	    
+	// Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var terrain = L.tileLayer.provider('Esri.WorldTerrain');
+      topo.addTo(mapa);       
 	    
 	    
       osm.addTo(mapa);
@@ -91,7 +94,8 @@
 	"OpenStreetMap": osm,
 	"OpenTopoMap": OpenTopoMap,
 	"OpenStreetMap_Mapnik": OpenStreetMap_Mapnik,
-	"OpenMapSurfer_Roads":OpenMapSurfer_Roads
+	"OpenMapSurfer_Roads":OpenMapSurfer_Roads,
+        "terrain":terrain
       };
       var overlays = {
       "Cantones de costa rica":cantonescr

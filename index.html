@@ -34,7 +34,14 @@
 	maxZoom: 17,
 	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
         });
-	OpenTopoMap.addTo(mapa);    
+	OpenTopoMap.addTo(mapa);  
+	    
+	var OpenMapSurfer_Roads = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+	maxZoom: 20,
+	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
+	OpenMapSurfer_Roads.addTo(mapa);    
+
 	    
 	  
 	    
@@ -79,7 +86,8 @@
       	    
       var baseLayers = {
 	"OpenStreetMap": osm,
-	"OpenTopoMap": OpenTopoMap
+	"OpenTopoMap": OpenTopoMap,
+	"OpenMapSurfer_Roads":OpenMapSurfer_Roads
 	
        };
       var overlays = {
